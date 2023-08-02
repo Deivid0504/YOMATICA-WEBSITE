@@ -1,0 +1,534 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Yomatica |</title>
+
+      <!-- SEO Meta Tags-->
+      <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
+      <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+      <meta name="author" content="Createx Studio">
+
+      <!-- Viewport-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- ICONO DEL TITULO-->
+      <link rel="shortcut icon" href="assets/favicon/Y yonni.png">
+
+      <!-- Vendor Styles-->
+      <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+      <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+
+      <!-- Main Theme Styles + Bootstrap-->
+      <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+      <link rel="stylesheet" href="assets/css/router.css">
+      <link rel="stylesheet" href="style_popup.css">
+
+      <!-- Page loading styles -->
+      <style>
+        .page-loading {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0; 
+          left: 0;
+          width: 100%; 
+          height: 100%;
+          -webkit-transition: all .4s .2s ease-in-out;
+          transition: all .4s .2s ease-in-out;
+          background-color:   #ffffff ;
+          opacity: 0;
+          visibility: hidden;
+          z-index: 9999;
+        }
+        .dark-mode .page-loading {
+          background-color: #0b0f19;
+        }
+        .page-loading.active {
+          opacity: 10;
+          visibility: visible;
+        }
+        .page-loading-inner {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          -webkit-transition: opacity .2s ease-in-out;
+          transition: opacity .2s ease-in-out;
+          opacity: 0;
+        }
+        .page-loading.active > .page-loading-inner {
+          opacity: 1;
+        }
+        .page-loading-inner > span {
+          display: block;
+          font-size: 1rem;
+          font-weight: normal;
+          color: #9397ad;
+        }
+        .dark-mode .page-loading-inner > span {
+          color: #fff;
+          opacity: .6;
+        }
+        .page-spinner {
+          display: inline-block;
+          width: 2.75rem;
+          height: 2.75rem;
+          margin-bottom: .75rem;
+          vertical-align: text-bottom;
+          border: .15em solid #b4b7c9;
+          border-right-color: transparent;
+          border-radius: 50%;
+          -webkit-animation: spinner .75s linear infinite;
+          animation: spinner .75s linear infinite;
+        }
+        .dark-mode .page-spinner {
+          border-color: rgba(255,255,255,.4);
+          border-right-color: transparent;
+        }
+        @-webkit-keyframes spinner {
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes spinner {
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+
+      <!-- Theme mode -->
+      <script>
+        let mode = window.localStorage.getItem('mode'),
+            root = document.getElementsByTagName('html')[0];
+        if (mode !== null && mode === 'dark') {
+          root.classList.add('dark-mode');
+        } else {
+          root.classList.remove('dark-mode');
+        }
+      </script>
+
+      <!-- Page loading scripts -->
+      <script>
+        (function () {
+          window.onload = function () {
+            const preloader = document.querySelector('.page-loading');
+            preloader.classList.remove('active');
+            setTimeout(function () {
+              preloader.remove();
+            }, 1000);
+          };
+        })();
+      </script>
+    </head>
+
+
+    <!-- Body -->
+    <body>
+
+      <!-- Page loading spinner -->
+      <div class="page-loading active">
+        <div class="page-loading-inner">
+          <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+      </div>
+      
+
+      <!-- Page wrapper for sticky footer -->
+      <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+      <main class="page-wrapper">
+
+
+        <!-- Navbar logo de inicio -->
+        <!-- Remove "fixed-top" class to make navigation bar scrollable with the page -->
+        <header class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+          <div class="container px-3">
+            <a href="index.html" class="navbar-brand pe-3">
+              <img src="assets/favicon/logo completo.png" width="170" alt="Silicon">
+            </a>
+              
+            </a>
+            <div id="navbarNav" class="offcanvas offcanvas-end">
+              <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  
+                  <li id="nav " class="nav-item text-center">
+                    <a href="#sec1" class="nav-link">Locación</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="services-single-v2.html" class="nav-link">Servicios</a>  
+                  </li>
+                  <li>
+                    <a href="about-v2.html" class="nav-link">Acerca de nosotros</a>
+                  </li>
+                
+                  <li class="nav-item">
+                    <a href="portfolio-single-project.html" class="nav-link">Portafolio</a>  
+              
+                  <li>
+                    <a href="contacts-v2.html" class="nav-link">Contacto </a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            
+            
+          </div>
+        </header>
+
+
+        <!-- Hero modem efecto pharallax-->
+        <!-- Carrusel -->
+      
+
+  <!-- Pagination: Pager -->
+  <div class="swiper swiper-pager swiper-nav-onhover" data-swiper-options='{
+    "spaceBetween": 20,
+    "loop": true,
+    "pager": true,
+    "navigation": {
+      "prevEl": ".page-prev",
+      "nextEl": ".page-next"
+    }
+  }'>
+    <div class="swiper-wrapper">
+
+      <!-- Item -->
+      <div class="swiper-slide">
+        <div class="ratio ratio-16x9 bg-secondary">
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center display-4"><img src="assets/img/conmutador-red-cables.jpg" alt=""></div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="swiper-slide">
+        <div class="ratio ratio-16x9 bg-secondary">
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center display-4"><img src="assets/img/joven-trabajando-interruptor-ethernet.jpg" alt=""></div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="swiper-slide">
+        <div class="ratio ratio-16x9 bg-secondary">
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center display-4"><img src="assets/img/centro-datos-racks-servidores-sala-pasillo-render-3d-datos-digitales-tecnologia-nube.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination (pager) -->
+    <nav class="pagination d-flex justify-content-center position-absolute bottom-0 zindex-2 start-50 translate-middle-x px-2 mb-3">
+      <div class="page-item me-2">
+        <a class="page-link page-prev btn-icon btn-sm" href="#">
+          <i class="bx bx-chevron-left"></i>
+        </a>
+      </div>
+      <ul class="list-unstyled d-flex justify-content-center mb-0"></ul>
+      <div class="page-item ms-2">
+        <a class="page-link page-next btn-icon btn-sm" href="#">
+          <i class="bx bx-chevron-right"></i>
+        </a>
+      </div>
+    </nav>
+  </div>
+
+
+        <!-- Main features (Slider on narrow scrreens) -->
+        <section id="container pt-5">
+          <div class="swiper mt-n3 mt-md-0 pt-md-4 pt-lg-5 mx-n2" data-swiper-options='{
+            "slidesPerView": 1,
+            "spaceBetween": 8,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "navigation": {
+              "prevEl": "#prev-news",
+              "nextEl": "#next-news"
+            },
+            "breakpoints": {
+              "500": {
+                "slidesPerView": 2
+              },
+              "700": {
+                "slidesPerView": 3
+              },
+              "1000": {
+                "slidesPerView": 4
+              }
+            }
+          }'>
+          
+            <!-- More features (Grid) -->
+        <section class="container pt-4 pb-5 py-lg-5">
+          <h2 class="h1 text-center pt-1 pt-md-3 pt-lg-4 pb-3 pb-md-4 mb-0 mb-lg-3">More Silicon Features</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
+
+            <!-- Item -->
+            <div class="col">
+              <div class="card h-100 bg-transparent border-0">
+                <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                  <i class="bx bxl-bootstrap fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                </div>
+                <div class="card-body">
+                  <h3 class="h6">Built with Bootstrap 5</h3>
+                  <p class="fs-sm mb-0">Silicon is the powerful front-end solution based on Bootstrap 5 — the world’s most popular responsive, mobile-first front-end component library.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+              <div class="card h-100 bg-transparent border-0">
+                <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                  <i class="bx bx-file fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                </div>
+                <div class="card-body">
+                  <h3 class="h6">Detailed Documentation</h3>
+                  <p class="fs-sm mb-0">Download package includes the documentation that covers all crucial information about how to get started, customize template and components usage.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+              <div class="card h-100 bg-transparent border-0">
+                <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                  <i class="bx bx-mobile fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                </div>
+                <div class="card-body">
+                  <h3 class="h6">Mobile Freindly Interface</h3>
+                  <p class="fs-sm mb-0">It's not a surprise that nowadays over 80% of users surf the inernet using their mobile devices. Silicon is 100% responsive and optimized for small touch screens.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+              <div class="card h-100 bg-transparent border-0">
+                <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                  <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><g clip-path="url(#D)"><path d="M6.706 11.335c0-4.925 4.007-8.932 8.932-8.932s8.932 4.007 8.932 8.932a9 9 0 0 1-.169 1.73l2.358.463c.142-.723.214-1.461.214-2.193A11.35 11.35 0 0 0 15.638 0 11.35 11.35 0 0 0 4.303 11.335c0 2.566.883 5.081 2.486 7.082l1.875-1.503a8.83 8.83 0 0 1-1.958-5.579z" fill="url(#A)"/><path d="M15.638 6.407c2.716 0 4.927 2.21 4.927 4.927h2.403a7.34 7.34 0 0 0-7.33-7.33 7.34 7.34 0 0 0-7.33 7.33 7.33 7.33 0 0 0 .959 3.623l2.088-1.19c-.421-.739-.643-1.581-.643-2.433 0-2.716 2.21-4.927 4.926-4.927z" fill="url(#B)"/><path d="M28.375 17.3a3.31 3.31 0 0 0-1.06.173 3.33 3.33 0 0 0-3.186-2.374c-.392 0-.767.069-1.116.193a3.33 3.33 0 0 0-3.129-2.203c-.32 0-.628.046-.921.131v-1.884a3.33 3.33 0 0 0-3.324-3.324 3.33 3.33 0 0 0-3.324 3.324v6.998c-.293-.084-.602-.131-.921-.131a3.33 3.33 0 0 0-3.324 3.324v6.236a8.25 8.25 0 0 0 8.237 8.237h7.157a8.25 8.25 0 0 0 8.237-8.237v-7.14a3.33 3.33 0 0 0-3.324-3.324zm.921 10.464c0 3.217-2.617 5.834-5.834 5.834h-7.157c-3.217 0-5.834-2.617-5.834-5.834v-6.236c0-.508.413-.921.921-.921s.921.413.921.921v4.852h2.403V11.336c0-.508.413-.921.921-.921s.921.413.921.921v5.077 3.526.684h2.403v-.684-3.526c0-.508.413-.921.921-.921s.921.413.921.921v4.211h2.403v-2.201c0-.508.413-.921.921-.921s.921.413.921.921v2.201h2.403c0-.508.413-.921.921-.921s.921.413.921.921v7.14z" fill="url(#C)"/></g><defs><linearGradient id="A" x1="4.303" y1="9.252" x2="26.973" y2="9.252" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="B" x1="8.309" y1="9.506" x2="22.968" y2="9.506" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="C" x1="8.068" y1="22.073" x2="31.7" y2="22.073" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><clipPath id="D"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg>
+                </div>
+                <div class="card-body">
+                  <h3 class="h6">Touch-Enabled Sliders</h3>
+                  <p class="fs-sm mb-0">In the era of touch screens it's important to ensure great user experience on mobile, especially when it comes to such frequently used interface component as slider.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+              <div class="card h-100 bg-transparent border-0">
+                <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                  <i class="bx bxl-html5 text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                </div>
+                <div class="card-body">
+                  <h3 class="h6">W3C Valid HTML Code</h3>
+                  <p class="fs-sm mb-0">All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Silicon is innovative at its core.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+              <div class="card h-100 bg-transparent border-0">
+                <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                  <i class="bx bxl-nodejs text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                </div>
+                <div class="card-body">
+                  <h3 class="h6">Kick-Start Your Development</h3>
+                  <p class="fs-sm mb-0">Start your development process fast and easy with Node.js and Gulp setup. Configuration files are included in download package. Full tasks automation.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+              <div class="card h-100 bg-transparent border-0">
+                <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                  <i class="bx bxl-sass text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                </div>
+                <div class="card-body">
+                  <h3 class="h6">Easy to Customize with Sass</h3>
+                  <p class="fs-sm mb-0">Silicon is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+              <div class="card h-100 bg-transparent border-0">
+                <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                  <i class="bx bxl-javascript text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                </div>
+                <div class="card-body">
+                  <h3 class="h6">Future Proof Java-Script</h3>
+                  <p class="fs-sm mb-0">Silicon core scripts as well as all dependencies are written in vanilla JS. And now with Bootstrap 5 we finally drop jQuery and use ES6 modules.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+            <!-- Pagination (bullets) -->
+            <div class="swiper-pagination position-relative bottom-0 mt-2"></div>
+          </div>
+        </section>
+
+
+        <!-- Contacts -->
+        <section id="sec1">
+          <div class="row pb-xl-3">
+            <div id="img" class="d-flex inline-flex align-items-center justify-content-end col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+              <div class="gallery rounded-3 shadow-sm">
+                <a href="https://www.google.com/maps/place/YOMATICA+TECNOLOGIA/@21.5208853,-87.3786658,17z/data=!3m1!4b1!4m6!3m5!1s0x8f4d93922eb91c3f:0x853179773ae7b46e!8m2!3d21.5208853!4d-87.3764771!16s%2Fg%2F11j0jqvt1h"   data-iframe="true"  data-sub-html='h6 class="fs-sm text-light">Yomatica tecnologia holbox, quintana roo</h6'>
+                  <i class="bx bxs-map text-primary display-5 position-absolute top-50 start-50 translate-middle mb-0"></i>
+                  <img  class="map" src="assets/img/landing/medical/mapyoma.png"  alt="Map cover">
+                  
+                </a>
+              </div>
+            </div>
+            <div id="text" class="col-xl-5 col-md-6 offset-xl-1">
+              <h2 id="h1" class="h1 pb-4 mb-1 mb-lg-3">Consulta con nosotros</h2>
+              <ul class="list-unstyled pb-3 mb-0 mb-lg-3">
+                <li class="d-flex mb-3">
+                  <i class="bx bx-map text-muted fs-xl mt-1 me-2"></i>77310 COLONIA CENTRO, 77310 ISLA DE HOLBOX, Q.R.
+                </li>
+                <li class="d-flex mb-3">
+                  <i class="bx bx-phone-call text-muted fs-xl mt-1 me-2"></i>9871213132
+                </li>
+                <li class="d-flex mb-3">
+                  <i class="bx bx-time text-muted fs-xl mt-1 me-2"></i>
+                  <div>
+                    <div><span class="text-dark fw-semibold me-1">Dom – viernes:</span>9:00 am – 20:00 pm</div>
+                    <div><span class="text-dark fw-semibold me-1">Sat – Sun:</span>9:00 am – 20:00 pm</div>
+                  </div>
+                </li>
+                <li class="d-flex mb-3">
+                  <i class="bx bx-envelope text-muted fs-xl mt-1 me-2"></i>
+                  yoni@yomatica.com
+                </li>
+              </ul>
+              <button type="button" id="btn-abrir-popup" class="btn btn-primary shadow-primary btn-lg">¡Contáctanos!</button>
+              <br>
+              <br>
+              <a id="bot" href="https://www.google.com/maps/place/YOMATICA+TECNOLOGIA/@21.5208853,-87.3786658,17z/data=!3m1!4b1!4m6!3m5!1s0x8f4d93922eb91c3f:0x853179773ae7b46e!8m2!3d21.5208853!4d-87.3764771!16s%2Fg%2F11j0jqvt1h" class="btn btn-primary shadow-primary btn-lg">Expandir mapa</a>
+          </div>
+        </section>
+      </main>
+
+
+      
+
+    
+      <!-- Footer -->
+      <footer class="footer bg-secondary pt-5 pb-4 pb-lg-5">
+        <div class="container pt-lg-4">
+          <div class="row pb-5">
+            <div class="col-lg-4 col-md-6">
+              <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+                <img src="assets/favicon/Y yonni.png" width="47" alt="Silicon">
+                YOMATICA
+              </div>
+              <p class="fs-sm pb-lg-3 mb-4">Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non feugiat feugiat egestas nulla nec. Arcu tempus, eget elementum dolor ullamcorper sodales ultrices eros.</p>
+            
+            </div>
+            <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+              <div id="footer-links" class="row">
+                <div class="col-lg-4">
+                  <h6 class="mb-2">
+                    <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+                  </h6>
+                  <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                    <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Inicio</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Acerca nosotros</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Servicios</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Clientes</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Contacto</a></li>
+                    </ul>
+                    <ul class="nav flex-column mb-2 mb-lg-0">
+                      
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-3">
+                  <h6 class="mb-2">
+                    <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+                  </h6>
+                  <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                    <ul class="nav flex-column mb-2 mb-lg-0">
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Facebook</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Twitter</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Instagram</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                  <h6 class="mb-2">Contact Us</h6>
+                  <a href="mailto:email@example.com" class="fw-medium">yoni@yomatica.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </footer>
+
+
+      <!-- Back to top button -->
+      <a href="#top" class="btn-scroll-top" data-scroll>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+        <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+      </a>
+
+
+      <!-- Vendor Scripts -->
+      <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+      <script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+      <script src="assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+
+
+
+        
+      <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+          <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">+</a>
+          <h3>Contáctanos</h3>
+          <h4>Contáctate con nosotros vía Whatsapp.</h4>
+          <form action="">
+            <div class="contenedor-inputs">
+              <input id="obj1" type="text" placeholder="Nombre">
+              <br>
+              <br>
+              <input id="obj2" type="text" placeholder="Asunto">
+            </div>
+            <br>
+            <input id="obj3" type="submit" class="btn-submit" value="Enviar">
+          </form>
+        </div>
+      </div>
+         
+              
+
+
+      <!-- Main Theme Script -->
+      <script src="assets/favicon/poup.js"></script>
+      <script src="assets/js/theme.min.js"></script>
+    </body>
+  </html>
